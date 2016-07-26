@@ -10,6 +10,8 @@ Some tests with spring-data-jpa
 - postgreSQL 9.5
 - [TODO] Connection Pool : [http://brettwooldridge.github.io/HikariCP/](http://brettwooldridge.github.io/HikariCP/ "http://brettwooldridge.github.io/HikariCP/")
 
+![alt tag](./Capture.PNG)
+
 
 # Links
 
