@@ -18,7 +18,8 @@
     <!-- scan services -->
     <context:component-scan base-package="com.keuss.sandbox.springdata.services" />
 
-    <tx:annotation-driven />
+    <!-- Enable the configuration of transactional behavior based on annotations -->
+    <tx:annotation-driven transaction-manager="transactionManager" />
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">

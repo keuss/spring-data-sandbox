@@ -12,4 +12,6 @@ public interface UserService {
    List<User> findAll();
 
    User create(User u);
+
+   void testComplexCreate(User u1, User u2);
 }

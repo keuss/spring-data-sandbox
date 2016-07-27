@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -30,5 +31,16 @@ public class UserServiceImpl implements UserService {
     public User create(User u) {
         LOGGER.debug("Call create with {}", u);
         return userRepository.save(u);
+    }
+
+    @Override
+    @Transactional
+    public void testComplexCreate(User u1, User u2) {
+
+        userRepository.save(u1);
+        LOGGER.debug("create with {} ok", u1);
+        if(true)
+            throw new RuntimeException("Error testComplexCreate");
+
     }
 }

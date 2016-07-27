@@ -23,10 +23,21 @@ public class SandBox {
         User user = new User();
         user.setName("steve");
         user.setEmail("steve@gmail.com");
-        us.create(user);
+       // us.create(user);
 
         // find all
         us.findAll().stream().forEach(u -> LOGGER.info("user : {}", u));
+
+        // stupid test for transaction
+        User user1 = new User();
+        user1.setName("bill");
+        user1.setEmail("bill@gmail.com");
+
+        User user2 = new User();
+        user2.setName("lynn");
+        user2.setEmail("lynn@gmail.com");
+
+        us.testComplexCreate(user1, user2);
     }
 
 }
