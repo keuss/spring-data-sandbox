@@ -17,9 +17,6 @@ public class SandBox {
 
         // open/read the application context file
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("context.xml");
-
-        System.out.println(ctx);
-
         UserService us = (UserService)ctx.getBean("userService");
 
         // create

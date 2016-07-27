@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by galloisg on 26/07/2016.
  */
-@Service
+@Service("userService")
 public class UserServiceImpl implements UserService {
 
     private static Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);

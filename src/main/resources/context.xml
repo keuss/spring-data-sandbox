@@ -15,6 +15,7 @@
         http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
 
+    <!-- scan services -->
     <context:component-scan base-package="com.keuss.sandbox.springdata.services" />
 
     <tx:annotation-driven />
@@ -52,9 +53,6 @@
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory" />
     </bean>
-
-    <!-- services -->
-    <bean id="userService" class="com.keuss.sandbox.springdata.services.UserServiceImpl"/>
 
     <bean id="persistenceExceptionTranslationPostProcessor"
           class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
