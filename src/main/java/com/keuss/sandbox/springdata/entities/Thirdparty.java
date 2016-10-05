@@ -39,9 +39,21 @@ public abstract class Thirdparty {
         this.market = market;
     }
 
+    // abstract methods
     public abstract void setSiren(String siren);
 
     public abstract String getSiren();
 
+    public abstract void setName(String name);
 
+    public abstract String getName();
+
+    @Override
+    public String toString() {
+        return "Thirdparty{" +
+                "id=" + id +
+                ", market='" + market + '\'' +
+                ", type='" + type + '\'' +
+                '}';
+    }
 }

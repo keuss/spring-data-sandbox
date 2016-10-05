@@ -9,7 +9,10 @@ import org.springframework.data.repository.NoRepositoryBean;
  */
 @NoRepositoryBean
 public interface ThirdpartyBaseRepository<T extends Thirdparty>
-        extends CrudRepository<T, Long> {
+        extends CrudRepository<T, Integer> {
+
+        /*JpaRepository will have all the functions of CrudRepository and PagingAndSortingRepository. So if you don't need
+        the repository to have the functions provided by JpaRepository and PagingAndSortingRepository , use CrudRepository.*/
 
         public T findByMarket(String market);
 

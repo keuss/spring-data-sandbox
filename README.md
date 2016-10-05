@@ -12,6 +12,9 @@ Some tests with spring-data-jpa
 
 ![alt tag](./Capture.PNG)
 
+## Test Inheritance
+![alt tag](./CaptureSQL.PNG)
+
 
 # Links
 

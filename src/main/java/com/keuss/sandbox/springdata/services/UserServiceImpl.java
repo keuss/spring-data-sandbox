@@ -24,12 +24,6 @@ public class UserServiceImpl implements UserService {
     protected UserRepository userRepository;
 
     @Autowired
-    protected PPRepository ppRepository;
-
-    @Autowired
-    protected PMRepository pmRepository;
-
-    @Autowired
     protected ThirdpartyRepository thirdpartyRepository;
 
     @Override
@@ -45,30 +39,30 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public PP createPP(PP pp) {
-        LOGGER.debug("Call create with {}", pp);
-        return ppRepository.save(pp);
-    }
-
-    @Override
-    public Thirdparty create(Thirdparty tp) {
-        return thirdpartyRepository.save(tp);
-    }
-
-
-    @Override
     @Transactional
     public void testComplexCreate(User u1, User u2) {
-
         userRepository.save(u1);
         LOGGER.debug("create with {} ok", u1);
-        if(true)
+        if (true)
             throw new RuntimeException("Error testComplexCreate");
 
     }
 
     @Override
+    public Thirdparty create(Thirdparty tp) {
+        LOGGER.debug("Call create with {}", tp);
+        return thirdpartyRepository.save(tp);
+    }
+
+    @Override
     public Thirdparty findByMarket(String market) {
+        LOGGER.debug("findByMarket with {}", market);
         return thirdpartyRepository.findByMarket(market);
+    }
+
+    @Override
+    public Iterable<Thirdparty> findAllThirdparty() {
+        LOGGER.debug("Call findAllThirdparty");
+        return thirdpartyRepository.findAll();
     }
 }

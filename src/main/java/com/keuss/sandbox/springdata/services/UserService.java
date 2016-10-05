@@ -1,6 +1,5 @@
 package com.keuss.sandbox.springdata.services;
 
-import com.keuss.sandbox.springdata.entities.PP;
 import com.keuss.sandbox.springdata.entities.Thirdparty;
 import com.keuss.sandbox.springdata.entities.User;
 
@@ -15,11 +14,11 @@ public interface UserService {
 
    User create(User u);
 
-   PP createPP(PP t);
+   void testComplexCreate(User u1, User u2);
 
    Thirdparty create(Thirdparty tp);
 
-   void testComplexCreate(User u1, User u2);
-
    Thirdparty findByMarket(String market);
+
+   Iterable<Thirdparty> findAllThirdparty();
 }

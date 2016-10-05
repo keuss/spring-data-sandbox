@@ -29,4 +29,12 @@ public class PP extends Thirdparty {
     public String getSiren() {
         return null;
     }
+
+    @Override
+    public String toString() {
+        return "PP{" +
+                "name='" + name + '\'' +
+                '}' +
+                super.toString();
+    }
 }

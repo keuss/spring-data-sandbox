@@ -16,7 +16,25 @@ public class PM extends Thirdparty {
         return siren;
     }
 
+    @Override
+    public void setName(String name) {
+
+    }
+
+    @Override
+    public String getName() {
+        return null;
+    }
+
     public void setSiren(String siren) {
         this.siren = siren;
+    }
+
+    @Override
+    public String toString() {
+        return "PM{" +
+                "siren='" + siren + '\'' +
+                '}' +
+                super.toString();
     }
 }
