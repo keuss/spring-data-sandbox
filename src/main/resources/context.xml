@@ -44,6 +44,9 @@
         </property>
     </bean>
 
+    <!-- Warning : http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/jdbc/datasource/DriverManagerDataSource.html -->
+    <!-- Simple implementation of the standard JDBC DataSource interface, configuring the plain old JDBC DriverManager via bean properties, and returning a new Connection from every getConnection call. -->
+    <!-- NOTE: This class is not an actual connection pool; it does not actually pool Connections. It just serves as simple replacement for a full-blown connection pool, implementing the same standard interface, but creating new Connections on every call. -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="${db.driver}"/>
         <property name="url" value="${db.url}"/>
